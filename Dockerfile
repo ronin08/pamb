@@ -2,8 +2,8 @@ FROM ubuntu:18.04
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
-RUN apt-get -qq update && \
-    apt-get -qq install -y aria2 python3 python3-pip \
+RUN apt-get -qq update
+RUN apt-get -qq install -y aria2 python3 python3-pip \
     locales python3-lxml \
     curl pv jq ffmpeg
 COPY requirements.txt .
